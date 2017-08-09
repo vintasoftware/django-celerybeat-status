@@ -1,0 +1,37 @@
+{% extends "admin/index.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}" />{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+  <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> &rsaquo;
+  <a href="{% url 'statuscheck:periodic-tasks-status' %}">{% trans 'Periodic tasks status' %}</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div id="content-main">
+
+  <ul>
+    {% for task in tasks %}
+    <li>
+      <strong>{{task.name}}</strong>
+      <ul>
+        <li><strong>{% trans 'Is due?' %}</strong> {% if task.is_due %} {% trans 'Yes' %} {% else %} {% trans 'No' %} {% endif %} </li>
+        <li><strong>{% trans 'Next execution:' %}</strong> {{ task.next_execution | date:"m/d/Y fa e" }}</li>
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+
+
+</div>
+{% endblock %}
+
+
+{% block sidebar %}{% endblock %}
