@@ -6,7 +6,7 @@ from core.tests.utils import (
 
 class PeriodicTaskStatusListTests(
         TestRequiresSuperuser, SuperuserBaseTestCase):
-    view_name = 'statuscheck:periodic-tasks-status'
+    view_name = 'periodic-tasks-status'
 
     def setUp(self):
         super().setUp()
