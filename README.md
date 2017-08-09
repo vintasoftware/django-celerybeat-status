@@ -1,6 +1,6 @@
-# Django Model Tenants
+# Django Celery Beat Status
 
-Model based tenants in Django.
+A library that integrates with django admin and shows in a simple GUI when your periodic are going to run next.
 
 ## Instalation
 
