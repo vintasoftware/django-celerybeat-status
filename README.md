@@ -5,7 +5,7 @@ A library that integrates with django admin and shows in a simple GUI when your 
 ## Instalation
 
 ``` bash
-pip install git+https://github.com/hugobessa/django_model_tenants.git#master
+pip install git+https://github.com/vintasoftware/celery-beat-status.git#master
 ```
 
 ## Configuration
