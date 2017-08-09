@@ -71,12 +71,12 @@ if sys.argv[-1] == 'publish':
     print("  git push --tags")
     shutil.rmtree('dist')
     shutil.rmtree('build')
-    shutil.rmtree('celery-beat-status.egg-info')
+    shutil.rmtree('django-celery-beat-status.egg-info')
     sys.exit()
 
 
 setup(
-    name='celery-beat-status',
+    name='django-celery-beat-status',
     version=version,
     license='MIT',
     description='Model based multi tenancy for Django.',
