@@ -32,7 +32,9 @@ urlpatterns = [
 
 ## Usage
 
-Just access django admin and you'll know what to do.
+Check your tasks under `/admin/statuscheck/periodictasks/` (if you configured your urls the way we suggested in this docs).
+
+You can also find a link in `/admin` sidebar.
 
 
 ## Commercial Support
