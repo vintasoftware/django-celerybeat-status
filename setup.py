@@ -82,7 +82,7 @@ setup(
     description='Model based multi tenancy for Django.',
     long_description=read_md('README.md'),
     author='Vinta Software',
-    author_email='contact@vinta.com.br',  # SEE NOTE BELOW (*)
+    author_email='contact@vinta.com.br',
     packages=get_packages('celery_beat_status'),
     package_data=get_package_data('celery_beat_status'),
     install_requires=[],
@@ -99,9 +99,3 @@ setup(
         'Topic :: Backgroud Workers',
     ]
 )
-
-# (*) Please direct queries to the discussion group, rather than to me directly
-#     Doing so helps ensure your question is helpful to other users.
-#     Queries directly to my email are likely to receive a canned response.
-#
-#     Many thanks for your understanding.
