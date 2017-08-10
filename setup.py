@@ -89,13 +89,9 @@ setup(
     zip_safe=False,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
-        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
         'Framework :: Django',
         'Framework :: Django :: 1.11',
-        'Intended Audience :: Developers',
-        'License :: MIT License',
-        'Operating System :: OS Independent',
         'Programming Language :: Python :: 3.5',
-        'Topic :: Backgroud Workers',
     ]
 )
