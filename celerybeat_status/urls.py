@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from celery_beat_status.views import PeriodicTasksStatusListView
+from celerybeat_status.views import PeriodicTasksStatusListView
 
 
 urlpatterns = [
