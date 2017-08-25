@@ -1,6 +1,7 @@
 from celery.beat import Service
 from django.utils import timezone
 import datetime
+import json
 
 
 def get_periodic_tasks_info():
@@ -18,6 +19,9 @@ def get_periodic_tasks_info():
 
         tasks.append({
             'name': key,
+            'task': entry.task,
+            'args': '(' + ', '.join([json.dumps(arg) for arg in entry.args]) + ')',
+            'kwargs': json.dumps(entry.kwargs),
             'is_due': is_due_tpl[0],
             'next_execution': next_execution
         })
