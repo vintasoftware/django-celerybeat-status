@@ -5,17 +5,17 @@ A library that integrates with django admin and shows in a simple GUI when your 
 ## Instalation
 
 ``` bash
-pip install django-celery-beat-status
+pip install django-celerybeat-status
 ```
 
 ## Configuration
 
-1. Add `'celery_beat_status'` to your `INSTALLED_APPS` variable in django settings
+1. Add `'celerybeat_status'` to your `INSTALLED_APPS` variable in django settings
 
 ``` python
 INSTALLED_APPS = [
   ...
-  'celery_beat_status',
+  'celerybeat_status',
 ]
 ```
 
@@ -26,7 +26,7 @@ from django.conf.urls import url, include
 
 urlpatterns = [
   # other urls...
-  url(r'^admin/statuscheck/', include('celery_beat_status.urls')),
+  url(r'^admin/statuscheck/', include('celerybeat_status.urls')),
 ]
 ```
 
