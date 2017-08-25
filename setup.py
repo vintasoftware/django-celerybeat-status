@@ -79,7 +79,7 @@ setup(
     name='django-celerybeat-status',
     version=version,
     license='MIT',
-    description='Model based multi tenancy for Django.',
+    description='A simple django admin extension that shows when your periodic are going to run next',
     long_description=read_md('README.md'),
     author='Vinta Software',
     author_email='contact@vinta.com.br',
