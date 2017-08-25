@@ -71,7 +71,7 @@ if sys.argv[-1] == 'publish':
     print("  git push --tags")
     shutil.rmtree('dist')
     shutil.rmtree('build')
-    shutil.rmtree('django-celerybeat-status.egg-info')
+    shutil.rmtree('django_celerybeat_status.egg-info')
     sys.exit()
 
 
