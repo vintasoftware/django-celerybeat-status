@@ -8,16 +8,12 @@ from io import open
 
 from setuptools import setup
 
+long_description = ''
 try:
     from pypandoc import convert
-
-    def read_md(f):
-        return convert(f, 'rst')
+    long_description = convert('README.md', 'rst')
 except ImportError:
     print("warning: pypandoc module not found, could not convert Markdown to RST")
-
-    def read_md(f):
-        return open(f, 'r', encoding='utf-8').read()
 
 
 def get_version(package):
@@ -80,7 +76,7 @@ setup(
     version=version,
     license='MIT',
     description='A simple django admin extension that shows when your periodic are going to run next',
-    long_description=read_md('README.md'),
+    long_description=long_description,
     author='Vinta Software',
     author_email='contact@vinta.com.br',
     packages=get_packages('celerybeat_status'),
