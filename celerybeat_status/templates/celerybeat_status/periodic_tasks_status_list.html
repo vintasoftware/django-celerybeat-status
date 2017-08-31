@@ -24,7 +24,7 @@
       <ul>
         <li><strong>{% trans 'Is due?' %}</strong> {% if task.is_due %} {% trans 'Yes' %} {% else %} {% trans 'No' %} {% endif %} </li>
         <li><strong>{% trans 'Next execution:' %}</strong> {{ task.next_execution | date:"m/d/Y fa e" }}</li>
-        <li><strong>{% trans 'Task:' %}</strong> {{ task.next_execution | date:"m/d/Y fa e" }}</li>
+        <li><strong>{% trans 'Task:' %}</strong> {{ task.task }}</li>
         <li><strong>{% trans 'Arguments:' %}</strong> {{ task.args }}</li>
         <li><strong>{% trans 'Keyword Arguments:' %}</strong> {{ task.kwargs }}</li>
       </ul>
