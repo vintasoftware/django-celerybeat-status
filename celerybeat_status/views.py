@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import user_passes_test
 from django.utils.decorators import method_decorator
-from django.utils.text import ugettext_lazy as _
+from django.utils.translation import ugettext_lazy as _
 from celerybeat_status.helpers import get_periodic_tasks_info
 
 
