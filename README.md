@@ -43,7 +43,7 @@ How you admin page will look like:
 
 How your tasks will be shown:
 
-![tasks-page](https://raw.githubusercontent.com/vintasoftware/django-celerybeat-status/master/README_IMAGES/django-celerybeat-status-admin.png)
+![tasks-page](https://raw.githubusercontent.com/vintasoftware/django-celerybeat-status/master/README_IMAGES/django-celerybeat-status-tasks.png)
 
 
 ## Commercial Support
