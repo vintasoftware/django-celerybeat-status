@@ -16,9 +16,21 @@ def run_tests(*args, **kwargs):
     TestRunner = get_runner(settings)
     test_runner = TestRunner(**kwargs)
     failures = test_runner.run_tests(args)
-    os.remove('./celerybeat-schedule.bak')
-    os.remove('./celerybeat-schedule.dat')
-    os.remove('./celerybeat-schedule.dir')
+    try:
+        os.remove('./celerybeat-schedule.bak')
+    except Exception:
+        pass
+
+    try:
+        os.remove('./celerybeat-schedule.dat')
+    except Exception:
+        pass
+
+    try:
+        os.remove('./celerybeat-schedule.dir')
+    except Exception:
+        pass
+        
     sys.exit(bool(failures))
 
 
