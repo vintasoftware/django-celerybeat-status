@@ -2,24 +2,19 @@
 
 language: python
 
+python: 
+  "2.7.13"
+  "3.5.2"
+  "3.6.2"
+
 matrix:
   fast_finish: true
-  include:
-    - python: "2.7.13"
-      - env: TOX_ENV=py27-django-110
-      - env: TOX_ENV=py27-django-111
-    - python: "3.5.2"
-      - env: TOX_ENV=py35-django-110
-      - env: TOX_ENV=py35-django-111
-      - env: TOX_ENV=py35-django-20
-    - python: "3.6.2"
-      - env: TOX_ENV=py36-django-110
-      - env: TOX_ENV=py36-django-111
-      - env: TOX_ENV=py36-django-20
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
   - pip install -r requirements_test.txt
+  - pip install tox-travis
+
 # command to run tests using coverage, e.g. python setup.py test
 script: tox -e $TOX_ENV -- --keepdb --parallel
 
