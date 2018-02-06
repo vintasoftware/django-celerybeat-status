@@ -9,5 +9,5 @@ class PeriodicTaskStatusListTests(
     view_name = 'periodic-tasks-status'
 
     def setUp(self):
-        super().setUp()
+        super(PeriodicTaskStatusListTests, self).setUp()
         self.view_url = reverse(self.view_name)

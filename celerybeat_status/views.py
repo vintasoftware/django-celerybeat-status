@@ -14,10 +14,10 @@ class PeriodicTasksStatusListView(TemplateView):
         login_url='admin:login'
     ))
     def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(request, *args, **kwargs)
+        return super(PeriodicTasksStatusListView, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super(PeriodicTasksStatusListView, self).get_context_data(**kwargs)
         context['title'] = _('Periodic tasks status')
         context['user'] = self.request.user
         context['site_url'] = self.site_url
