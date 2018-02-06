@@ -1,2 +1,2 @@
 from django.contrib.admin.sites import AdminSite
-AdminSite.index_template = 'admin/custom_index.html'
+AdminSite.index_template = 'celerybeat_status/custom_admin/index.html'
