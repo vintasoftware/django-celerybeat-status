@@ -3,9 +3,9 @@
 language: python
 
 python: 
-  "2.7"
-  "3.5"
-  "3.6"
+  - "2.7"
+  - "3.5"
+  - "3.6"
 
 matrix:
   fast_finish: true
@@ -16,7 +16,7 @@ install:
   - pip install tox-travis
 
 # command to run tests using coverage, e.g. python setup.py test
-script: tox -e $TOX_ENV -- --keepdb --parallel
+script: tox -- --keepdb --parallel
 
 after_success:
   - codecov -e TOX_ENV
