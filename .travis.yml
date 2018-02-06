@@ -3,7 +3,9 @@
 language: python
 
 python:
-  - "3.6"
+  - "2.7.13"
+  - "3.5.2"
+  - "3.6.2"
 
 env:
   - TOX_ENV=py36-django-110
