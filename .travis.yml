@@ -6,19 +6,16 @@ matrix:
   fast_finish: true
   include:
     - python: "2.7.13"
-      env:
-        - TOX_ENV=py27-django-110
-        - TOX_ENV=py27-django-111
+      - env: TOX_ENV=py27-django-110
+      - env: TOX_ENV=py27-django-111
     - python: "3.5.2"
-      env:
-        - TOX_ENV=py35-django-110
-        - TOX_ENV=py35-django-111
-        - TOX_ENV=py35-django-20
+      - env: TOX_ENV=py35-django-110
+      - env: TOX_ENV=py35-django-111
+      - env: TOX_ENV=py35-django-20
     - python: "3.6.2"
-      env:
-        - TOX_ENV=py36-django-110
-        - TOX_ENV=py36-django-111
-        - TOX_ENV=py36-django-20
+      - env: TOX_ENV=py36-django-110
+      - env: TOX_ENV=py36-django-111
+      - env: TOX_ENV=py36-django-20
 
 # command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install:
