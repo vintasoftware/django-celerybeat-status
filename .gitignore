@@ -14,5 +14,6 @@ coverage.*
 .coverage
 .tox
 .vscode/
+.python-version
 
 !.gitignore
