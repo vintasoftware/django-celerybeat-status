@@ -1,10 +1,11 @@
+from django.utils import version as django_version
 
 from celerybeat_status.tests.utils import (
     SuperuserBaseTestCase, TestRequiresSuperuser)
 
-try:
+if django_version.get_complete_version() < (2, 0, 0):
     from django.core.urlresolvers import reverse
-except ImportError:
+else:
     from django.urls import reverse
 
 
