@@ -87,7 +87,11 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Framework :: Django',
+        'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.11',
-        'Programming Language :: Python :: 3.5',
+        'Framework :: Django :: 2.0',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.6',
     ]
 )
