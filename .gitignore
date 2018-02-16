@@ -15,5 +15,7 @@ coverage.*
 .tox
 .vscode/
 .python-version
+celerybeat-schedule
+celerybeat-schedule.*
 
 !.gitignore
