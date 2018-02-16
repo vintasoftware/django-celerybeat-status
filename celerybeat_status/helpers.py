@@ -5,7 +5,7 @@ import json
 
 
 def get_periodic_tasks_info():
-    from celery.schedules import current_app
+    from celery import current_app
     schedule = Service(current_app).get_scheduler().get_schedule()
     tasks = []
     for key, entry in schedule.items():

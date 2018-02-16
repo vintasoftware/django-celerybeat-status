@@ -1,7 +1,12 @@
-from django.core.urlresolvers import reverse
+from django.utils import version as django_version
 
-from core.tests.utils import (
+from celerybeat_status.tests.utils import (
     SuperuserBaseTestCase, TestRequiresSuperuser)
+
+if django_version.get_complete_version() < (2, 0, 0):
+    from django.core.urlresolvers import reverse
+else:
+    from django.urls import reverse
 
 
 class PeriodicTaskStatusListTests(

@@ -1,0 +1,15 @@
+[run]
+branch = true
+
+[report]
+omit =
+    *site-packages*
+    *tests*
+    *migrations*
+    *.tox
+    celerybeat_status/urls.py
+    celerybeat_status/admin.py
+    celerybeat_status/apps.py
+show_missing = True
+exclude_lines =
+    raise NotImplementedError

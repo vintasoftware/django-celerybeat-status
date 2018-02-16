@@ -1,3 +1,4 @@
+# -*- coding: utf-8
 __title__ = 'CeleryBeat Status'
 __version__ = '0.0.9'
 __author__ = 'Vinta Software'
