@@ -32,7 +32,7 @@ urlpatterns = [
 
 ## Usage
 
-Check your tasks under `/admin/statuscheck/periodictasks/` (if you configured your urls the way we suggested in this docs).
+Check your tasks under `/admin/statuscheck/periodic-tasks/` (if you configured your urls the way we suggested in this docs).
 
 You can also find a link in `/admin` sidebar.
 
