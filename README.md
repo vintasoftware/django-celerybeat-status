@@ -26,7 +26,7 @@ from django.conf.urls import url, include
 
 urlpatterns = [
   # other urls...
-  url(r'^admin/statuscheck/', include('celerybeat_status.urls')),
+  url(r'^admin/statuscheck/', include('celerybeat_status.urls', namespce='celerybeat_status')),
 ]
 ```
 

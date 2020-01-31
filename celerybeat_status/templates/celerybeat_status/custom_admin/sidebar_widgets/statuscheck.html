@@ -3,6 +3,6 @@
 <div class="module" id="status-check-links">
   <h2> {% trans 'Status check links' %} </h2>
   <ul>
-    <li><a href="{% url 'periodic-tasks-status' %}">Periodic tasks status</a></li>
+    <li><a href="{% url 'celerybeat_status:periodic-tasks-status' %}">Periodic tasks status</a></li>
   </ul>
 </div>
