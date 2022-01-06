@@ -1,4 +1,4 @@
-celery==4.1.0
+celery==5.2.2
 coverage==4.3.4
 mock>=1.0.1
 flake8>=2.1.0
