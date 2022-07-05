@@ -1,8 +1,11 @@
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import user_passes_test
 from django.utils.decorators import method_decorator
-from django.utils.translation import ugettext_lazy as _
 from celerybeat_status.helpers import get_periodic_tasks_info
+if django_version.get_complete_version() < (4, 0, 0):
+    from django.utils.translation import ugettext_lazy as _
+else:
+    from django.utils.translation import gettext_lazy as _
 
 
 class PeriodicTasksStatusListView(TemplateView):
