@@ -1,7 +1,8 @@
-from celery.beat import Service
-from django.utils import timezone
 import datetime
 import json
+
+from celery.beat import Service
+from django.utils import timezone
 
 
 def get_periodic_tasks_info():

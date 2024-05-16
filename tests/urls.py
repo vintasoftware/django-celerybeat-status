@@ -1,6 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
-
+from django.urls import include, path
 
 urlpatterns = [
     # The new admin catch-all view will break URL patterns routed after the admin URLs and matching
