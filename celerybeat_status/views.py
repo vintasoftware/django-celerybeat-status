@@ -10,14 +10,10 @@ class PeriodicTasksStatusListView(TemplateView):
     site_url = "/"
 
     @method_decorator(
-        user_passes_test(
-            lambda u: u.is_staff and u.is_superuser, login_url="admin:login"
-        )
+        user_passes_test(lambda u: u.is_staff and u.is_superuser, login_url="admin:login")
     )
     def dispatch(self, request, *args, **kwargs):
-        return super(PeriodicTasksStatusListView, self).dispatch(
-            request, *args, **kwargs
-        )
+        return super(PeriodicTasksStatusListView, self).dispatch(request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(PeriodicTasksStatusListView, self).get_context_data(**kwargs)

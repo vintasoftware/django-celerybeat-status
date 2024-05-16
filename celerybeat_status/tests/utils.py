@@ -8,11 +8,11 @@ class BaseTestCase(TestCase):
 
     def setUp(self):
         super(BaseTestCase, self).setUp()
-        self.user_email = 'user@email.com'
-        self.user_password = 'the_password'
+        self.user_email = "user@email.com"
+        self.user_password = "the_password"
         self.user = User.objects.create_user(
-            username='testuser', email=self.user_email, 
-            password=self.user_password)
+            username="testuser", email=self.user_email, password=self.user_password
+        )
 
         self.auth_client = Client()
         self.auth_client.force_login(self.user)
@@ -21,12 +21,11 @@ class BaseTestCase(TestCase):
 class SuperuserBaseTestCase(BaseTestCase):
 
     def setUp(self):
-        self.superuser_email = 'superuser@email.com'
-        self.superuser_password = 'the_password'
+        self.superuser_email = "superuser@email.com"
+        self.superuser_password = "the_password"
         self.superuser = User.objects.create_superuser(
-            username='testsuperuser',
-            email=self.superuser_email,
-            password=self.superuser_password)
+            username="testsuperuser", email=self.superuser_email, password=self.superuser_password
+        )
 
         self.super_client = Client()
         self.super_client.force_login(self.superuser)
