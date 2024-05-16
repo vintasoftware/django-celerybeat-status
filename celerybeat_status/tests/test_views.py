@@ -5,7 +5,7 @@ from celerybeat_status.tests.utils import SuperuserBaseTestCase, TestRequiresSup
 
 
 class PeriodicTaskStatusListTests(TestRequiresSuperuser, SuperuserBaseTestCase):
-    view_name = "periodic-tasks-status"
+    view_name = "celerybeat_status:periodic-tasks-status"
 
     def setUp(self):
         super(PeriodicTaskStatusListTests, self).setUp()
