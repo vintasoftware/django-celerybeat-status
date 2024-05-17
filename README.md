@@ -55,13 +55,26 @@ How your tasks will be shown:
 
 1. Clone the repository.
 
-2. Install the dependencies.
+2. Create a virtual environment.
+
+3. Install the dependencies.
 
 ```bash
 pip install -r requirements_test.txt
 ```
 
-3. Run the tests. This packages uses `tox` to run tests on multiple evironments, please make sure they are passing before submitting a pull request.
+4. Run the project. Relevant to check UI changes.
+
+```bash
+# Create the database and run the migrations.
+python manage.py migrate
+# Create a superuser. This will allow you to access the admin interface.
+python manage.py createsuperuser
+# Start the development server. You can view the application by navigating to the URL provided in the terminal.
+python manage.py runserver
+```
+
+5. Run the tests. This package uses `tox` to run tests on multiple evironments, please make sure they are passing before submitting a pull request.
 
 ```bash
 tox
