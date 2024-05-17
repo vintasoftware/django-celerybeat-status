@@ -49,6 +49,24 @@ How your tasks will be shown:
 
 ![tasks-page](https://raw.githubusercontent.com/vintasoftware/django-celerybeat-status/master/README_IMAGES/django-celerybeat-status-tasks.png)
 
+## Contributing
+
+### Setting up the development environment
+
+1. Clone the repository.
+
+2. Install the dependencies.
+
+```bash
+pip install -r requirements_test.txt
+```
+
+3. Run the tests. This packages uses `tox` to run tests on multiple evironments, please make sure they are passing before submitting a pull request.
+
+```bash
+tox
+```
+
 ## Commercial Support
 
 This project, as other Vinta open-source projects, is used in products of Vinta clients. We are always looking for exciting work, so if you need any commercial support, feel free to get in touch: contact@vinta.com.br
