@@ -9,29 +9,29 @@ A library that integrates with django admin and shows in a simple GUI when your 
 
 ## Instalation
 
-``` bash
+```bash
 pip install django-celerybeat-status
 ```
 
 ## Configuration
 
-1. Add `'celerybeat_status'` to your `INSTALLED_APPS` variable in django settings
+1. Add `"celerybeat_status"` to your `INSTALLED_APPS` variable in django settings
 
-``` python
+```python
 INSTALLED_APPS = [
   ...
-  'celerybeat_status',
+  "celerybeat_status",
 ]
 ```
 
 2. Create a url for the status check view
 
 ```python
-from django.conf.urls import url, include
+from django.urls import include, path
 
 urlpatterns = [
   # other urls...
-  url(r'^admin/statuscheck/', include('celerybeat_status.urls', namespce='celerybeat_status')),
+  path("admin/statuscheck/", include("celerybeat_status.urls", namespace="celerybeat_status")),
 ]
 ```
 
@@ -45,11 +45,9 @@ How you admin page will look like:
 
 ![admin-page](https://raw.githubusercontent.com/vintasoftware/django-celerybeat-status/master/README_IMAGES/django-celerybeat-status-admin.png)
 
-
 How your tasks will be shown:
 
 ![tasks-page](https://raw.githubusercontent.com/vintasoftware/django-celerybeat-status/master/README_IMAGES/django-celerybeat-status-tasks.png)
-
 
 ## Commercial Support
 
