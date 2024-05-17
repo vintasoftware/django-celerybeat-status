@@ -10,11 +10,10 @@ from setuptools import setup
 
 long_description = ""
 try:
-    from pypandoc import convert
-
-    long_description = convert("README.md", "rst")
-except ImportError:
-    print("warning: pypandoc module not found, could not convert Markdown to RST")
+    with open("README.md") as f:
+        long_description = f.read()
+except FileNotFoundError:
+    print("warning: README.md not found, could not set long_description")
 
 
 def get_version(package):
@@ -57,10 +56,6 @@ version = get_version("celerybeat_status")
 
 
 if sys.argv[-1] == "publish":
-    try:
-        import pypandoc
-    except ImportError:
-        print("pypandoc not installed.\nUse `pip install pypandoc`.\nExiting.")
     if os.system("pip freeze | grep twine"):
         print("twine not installed.\nUse `pip install twine`.\nExiting.")
         sys.exit()
@@ -81,6 +76,7 @@ setup(
     license="MIT",
     description="A simple django admin extension that shows when your periodic are going to run next",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     author="Vinta Software",
     author_email="contact@vinta.com.br",
     packages=get_packages("celerybeat_status"),
