@@ -10,7 +10,7 @@
 {% block breadcrumbs %}
 <div class="breadcrumbs">
   <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> &rsaquo;
-  <a href="{% url 'periodic-tasks-status' %}">{% trans 'Periodic tasks status' %}</a>
+  <a href="{% url 'celerybeat_status:periodic-tasks-status' %}">{% trans 'Periodic tasks status' %}</a>
 </div>
 {% endblock %}
 

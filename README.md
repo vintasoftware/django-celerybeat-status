@@ -2,6 +2,7 @@
 
 ![PyPI - Version](https://img.shields.io/pypi/v/django-celerybeat-status)
 ![Supported Python Versions](https://img.shields.io/pypi/pyversions/django-celerybeat-status.svg)
+![Supported Django Versions](https://img.shields.io/pypi/frameworkversions/django/django-celerybeat-status.svg)
 [![Build Status](https://github.com/vintasoftware/django-celerybeat-status/actions/workflows/tests.yml/badge.svg)](https://github.com/vintasoftware/django-celerybeat-status/actions/workflows/tests.yml)
 [![Coverage Status](https://coveralls.io/repos/github/vintasoftware/django-celerybeat-status/badge.svg?branch=main)](https://coveralls.io/github/vintasoftware/django-celerybeat-status?branch=main)
 
@@ -31,7 +32,8 @@ from django.urls import include, path
 
 urlpatterns = [
   # other urls...
-  path("admin/statuscheck/", include("celerybeat_status.urls", namespace="celerybeat_status")),
+  path("admin/statuscheck/", include("celerybeat_status.urls")),  # celerybeat_status admin
+  path("admin/", admin.site.urls),  # django admin
 ]
 ```
 
