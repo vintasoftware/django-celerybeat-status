@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class CeleryBeatStatusConfig(AppConfig):
-    name = 'celerybeat_status'
+    name = "celerybeat_status"
