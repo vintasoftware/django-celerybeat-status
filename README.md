@@ -31,7 +31,8 @@ from django.urls import include, path
 
 urlpatterns = [
   # other urls...
-  path("admin/statuscheck/", include("celerybeat_status.urls", namespace="celerybeat_status")),
+  path("admin/statuscheck/", include("celerybeat_status.urls")),  # celerybeat_status admin
+  path("admin/", admin.site.urls),  # django admin
 ]
 ```
 
